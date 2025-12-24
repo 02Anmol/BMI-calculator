@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Anmol Tyagi",
+    "weight_kg": 72,
+    "height_m": 3,
+    "bmi": 8,
+    "category": "Underweight"
+  },
+  {
+    "name": "Anmol",
+    "weight_kg": 72,
+    "height_m": 2,
+    "bmi": 18,
+    "category": "Underweight"
+  },
+  {
+    "name": "Anmol",
+    "weight_kg": 72,
+    "height_m": 1.81,
+    "bmi": 21.97735111870822,
+    "category": "Normal Weight"
+  },
+  {
+    "name": "Anmol",
+    "weight_kg": 72,
+    "height_m": 1.81,
+    "bmi": 21.97735111870822,
+    "category": "Normal Weight"
+  },
+  {
+    "name": "Omkar",
+    "weight_kg": 55,
+    "height_m": 165,
+    "bmi": 0.00202020202020202,
+    "category": "Underweight"
+  },
+  {
+    "name": "omkar",
+    "weight_kg": 55,
+    "height_m": 1.7,
+    "bmi": 19.031141868512112,
+    "category": "Normal Weight"
+  }
+]

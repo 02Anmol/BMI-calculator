@@ -1,0 +1,53 @@
+{{define "content"}}
+    <h1>Go BMI Calculator</h1>
+    
+    {{if .Message}}
+    <p class="success-message">{{.Message}}</p>
+    {{end}}
+
+    <div class="form-section">
+        <h2>Calculate BMI</h2>
+        <form method="POST" action="/calculate">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="weight">Weight (kg):</label>
+            <input type="text" id="weight" name="weight" required>
+            
+            <label for="height">Height (cm):</label>
+            <input type="text" id="height" name="height" required>
+            
+            <button type="submit">Calculate & Save BMI</button>
+        </form>
+    </div>
+
+    <div class="data-section">
+        <h2>Stored User Data (Total: {{len .Users}})</h2>
+        {{if .Users}}
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Weight (kg)</th>
+                    <th>Height (m)</th>
+                    <th>BMI</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{range .Users}}
+                <tr>
+                    <td>{{.Name}}</td>
+                    <td>{{printf "%.2f" .WeightKg}}</td>
+                    <td>{{printf "%.2f" .HeightM}}</td>
+                    <td><b>{{printf "%.2f" .BMI}}</b></td>
+                    <td>{{.Category}}</td>
+                </tr>
+                {{end}}
+            </tbody>
+        </table>
+        {{else}}
+        <p>No user data stored yet.</p>
+        {{end}}
+    </div>
+{{end}}
